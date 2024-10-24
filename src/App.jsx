@@ -3,15 +3,11 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import ReactGA from "react-ga4";
+import { CookieBanner } from "./components/CookieBanner/CookieBanner";
 
 function App() {
   const [count, setCount] = useState(0);
   const [withAnalytics, setWithAnalytics] = useState(false);
-
-  // Initialize Google Analytics with GTag ID
-  if (withAnalytics === true) {
-    ReactGA.initialize("G-BG5J1BKW1N");
-  }
 
   return (
     <>
@@ -35,6 +31,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <CookieBanner />
     </>
   );
 }
